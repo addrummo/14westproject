@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<Script>  $(document).on('click', 'input[type="checkbox"][data-group]', function(event) {
-  // The checkbox that was clicked
-  var actor = $(this);
-  // The status of that checkbox
-  var checked = actor.prop('checked');
-  // The group that checkbox is in
-  var group = actor.data('group');
-  // All checkboxes of that group
-  var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
-  // All checkboxes excluding the one that was clicked
-  var otherCheckboxes = checkboxes.not(actor);
-  // Check those checkboxes
-    otherCheckboxes.prop('checked', checked); });
+<Script>  $(function() {
+
+  $(".checkbox_class").change(function() {
+
+    var x = this.checked;
+    $(".checkbox_class").prop("checked", x);
+ });
+});
+  
   </script>
   
 <style>
