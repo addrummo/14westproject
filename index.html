@@ -234,21 +234,16 @@ var x = setInterval(function() {
 	<br/>
 	<br/>
 	<br/>
-	<br/> 
-	<button> Yes! Reserve my spot now! </button>  
 	<br/>  
-	 
-	</div>
-	  
-	</div>
-<button onclick="myFunction()">Try it</button>
+	
+<button onclick="myFunction()">Yes! Reserve my spot now!</button>
 
 <p id="demo"></p>
 
 <script>
 function myFunction() {
   var txt;
-  if (confirm("Press a button!")) {
+  if (confirm("Please check the checkbox before proceeding!")) {
     txt = "You pressed OK!";
   } else {
     txt = "You pressed Cancel!";
@@ -256,6 +251,12 @@ function myFunction() {
   document.getElementById("demo").innerHTML = txt;
 }
 </script>
+<br/>  
+	 
+	</div>
+	  
+	</div>
+
 	</body>
 	</html>
 
