@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   
-  
+<Script>  $(document).on('click', 'input[type="checkbox"][data-group]', function(event) {
+  // The checkbox that was clicked
+  var actor = $(this);
+  // The status of that checkbox
+  var checked = actor.prop('checked');
+  // The group that checkbox is in
+  var group = actor.data('group');
+  // All checkboxes of that group
+  var checkboxes = $('input[type="checkbox"][data-group="' + group + '"]');
+  // All checkboxes excluding the one that was clicked
+  var otherCheckboxes = checkboxes.not(actor);
+  // Check those checkboxes
+    otherCheckboxes.prop('checked', checked); </script>
+}); 
 <style>
   body {font-family:"arial", sans-serif; }
   
@@ -186,13 +199,13 @@ Coming <font color="005282"; font style="latos"> Gold Mega-Catalyst </font> Is A
 <br/>
 <br/>
 <br/> 
-<button> Yes! Reserve my spot now! </button>  
-<br/> 
-  
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <input class="checkbox1 checkbox_class" type="checkbox" name='1' id="example1" value="example1" />
 
 <input class="checkbox2 checkbox_class" type="checkbox" name='2' id="example2" value="example2" />
+  
+<button> Yes! Reserve my spot now! </button>  
+<br/> 
   
 </div>
   
